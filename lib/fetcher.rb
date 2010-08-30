@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + "/boot.rb"
 class Fetcher
   def fetch(url)
     page = Page.find_by_url(url)
-    return [page.content, page.url] if page
+    return [page.content, page.title] if page
     puts "from Web"
     extractor = ExtractContent::Extractor.new
     html = open(url).read
