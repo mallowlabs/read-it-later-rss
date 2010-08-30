@@ -7,3 +7,9 @@ Migrate
 
 Cron Setup
  $ heroku addons:add cron:daily
+
+Cron Test
+ $ heroku rake cron
+
+Cron Log
+ $ heroku logs:cron
