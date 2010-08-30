@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'logger'
 require 'active_record'
+require 'active_support'
 require 'extractcontent'
 require 'open-uri'
 require 'kconv'

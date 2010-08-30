@@ -9,4 +9,7 @@ namespace :db do
   end
 end
 
+task :cron do
+  Page.delete_all(["created_at < ?", Time.now - 30.days])
+end
 
