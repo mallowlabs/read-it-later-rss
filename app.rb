@@ -1,10 +1,8 @@
 #!/usr/bin/env ruby -Ku
 require 'rubygems'
+require File.dirname(__FILE__) + "/lib/boot"
 require 'sinatra'
-require 'open-uri'
 require 'rss'
-require 'extractcontent'
-require 'kconv'
 
 helpers do
   include Rack::Utils; alias_method :h, :escape_html
@@ -29,14 +27,12 @@ get '/:name/:target' do |name, target|
   url = "http://readitlaterlist.com/users/#{h name}/feed/#{h target}"
   open(url) do |file|
     rss = RSS::Parser.parse(file.read)
-    extractor = ExtractContent::Extractor.new
+    fetcher = Fetcher.new
     rss.items.each do |item|
-      puts item.link # DEBUG
       begin
-        html = open(item.link).read
-        body, title = extractor.analyse(html)
-        item.title = title.toutf8
-        item.description = body.toutf8
+        body, title = fetcher.fetch(item.link)
+        item.title = title
+        item.description = body
       rescue
         # Skip replacing on error
       end
