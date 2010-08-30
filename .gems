@@ -1,4 +1,2 @@
 sinatra
 extractcontent
-activerecord
-sqlite3
