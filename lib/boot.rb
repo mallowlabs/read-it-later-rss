@@ -1,5 +1,5 @@
 require 'rubygems'
-#require 'activerecord'
+require 'activerecord'
 require 'extractcontent'
 require 'open-uri'
 require 'kconv'
