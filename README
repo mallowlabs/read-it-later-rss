@@ -1,0 +1,9 @@
+== deploy commands ==
+Push
+ $ git push origin master
+
+Migrate
+ $ heroku rake db:migrate
+
+Cron Setup
+ $ heroku addons:add cron:daily
