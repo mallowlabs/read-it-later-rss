@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'logger'
 require 'active_record'
 require 'extractcontent'
 require 'open-uri'
