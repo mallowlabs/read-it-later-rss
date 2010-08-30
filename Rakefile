@@ -1,5 +1,4 @@
 require 'rubygems'
-require 'active_record'
 require 'lib/boot'
 
 namespace :db do
