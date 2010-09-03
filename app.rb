@@ -6,6 +6,13 @@ require 'rss'
 
 helpers do
   include Rack::Utils; alias_method :h, :escape_html
+
+  def partial(renderer, template, options = {})
+    options = options.merge({:layout => false})
+    template = "_#{template.to_s}".to_sym
+    m = method(renderer)
+    m.call(template, options)
+  end
 end
 
 get '/' do
