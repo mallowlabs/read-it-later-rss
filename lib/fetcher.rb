@@ -8,6 +8,7 @@ class Fetcher
     extractor = ExtractContent::Extractor.new
     html = open(url).read
     content, title = extractor.analyse(html).map { |t| t.toutf8 }
+    content = content.split(//u)[0..300].join + "..." if content.split(//u).size > 300
     Page.new(:url => url, :content => content, :title => title).save
     return [content, title]
   end
