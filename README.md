@@ -4,33 +4,30 @@ Pocket (Read It Later) RSS Generator.
 
 URL
 ---------------
-https://read-it-later-rss.heroku.com
+https://read-it-later-rss.herokuapp.com
 
 Deploy commands
 ---------------
 
-Push
+Heroku Setup
 
-   $ git push origin master
-
-Migrate
-
-   $ heroku rake db:migrate
-
-Cron Setup
-
-   $ heroku addons:add scheduler
+    $ heroku create
+    $ heroku addons:add heroku-postgresql
+    $ heroku addons:add scheduler
+    $ git push heroku master
+    $ heroku bundle exec rake db:migrate
 
 Cron Test
 
-   $ heroku rake cron
+    $ heroku bundle exec rake cron
 
 Cron Log
 
-   $ heroku logs:cron
+    $ heroku logs:cron
 
 Author
 ---------------
+
 * @mallowlabs
 
 License
