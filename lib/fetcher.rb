@@ -5,9 +5,8 @@ class Fetcher
     page = Page.find_by_url(url)
     return [page.content, page.title] if page
     puts "from Web"
-    extractor = ExtractContent::Extractor.new
     html = open(url).read
-    content, title = extractor.analyse(html).map { |t| t.toutf8 }
+    content, title = ExtractContent.analyse(html.toutf8)
     content = content.split(//u)[0..300].join + "..." if content.split(//u).size > 300
     Page.new(:url => url, :content => content, :title => title).save
     return [content, title]

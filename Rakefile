@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'lib/boot'
+require './lib/boot'
 
 namespace :db do
   desc "migrate database"
