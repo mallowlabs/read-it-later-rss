@@ -39,7 +39,7 @@ get '/:name/:target' do |name, target|
       begin
         body, title = fetcher.fetch(item.link)
         item.title = title
-        item.description = body
+        item.description = body.gsub(/(?!\n)[[:cntrl:]]/,"")
       rescue
         # Skip replacing on error
       end
