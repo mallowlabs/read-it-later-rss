@@ -7,27 +7,27 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (6.0.2.1)
-      activesupport (= 6.0.2.1)
-    activerecord (6.0.2.1)
-      activemodel (= 6.0.2.1)
-      activesupport (= 6.0.2.1)
-    activesupport (6.0.2.1)
+    activemodel (6.0.5.1)
+      activesupport (= 6.0.5.1)
+    activerecord (6.0.5.1)
+      activemodel (= 6.0.5.1)
+      activesupport (= 6.0.5.1)
+    activesupport (6.0.5.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-      zeitwerk (~> 2.2)
+      zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
-    concurrent-ruby (1.1.6)
+    concurrent-ruby (1.1.10)
     crack (0.4.5)
       rexml
     daemons (1.4.1)
     eventmachine (1.2.7)
     foreman (0.87.0)
     hashdiff (1.0.1)
-    i18n (1.8.2)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     minitest (5.14.0)
     mustermann (2.0.2)
@@ -60,7 +60,7 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    zeitwerk (2.2.2)
+    zeitwerk (2.6.0)
 
 PLATFORMS
   ruby
