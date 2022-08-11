@@ -19,3 +19,7 @@ group :test, :development do
   gem 'sqlite3'
 end
 
+group :test do
+  gem 'minitest'
+  gem 'rack-test'
+end
