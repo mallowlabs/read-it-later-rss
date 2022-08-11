@@ -32,7 +32,7 @@ end
 get '/:name/:target' do |name, target|
   content_type 'application/xml', :charset => 'utf-8'
   url = "https://getpocket.com/users/#{h name}/feed/#{h target}"
-  open(url) do |file|
+  URI.open(url) do |file|
     rss = RSS::Parser.parse(file.read)
     fetcher = Fetcher.new
     rss.items.each do |item|
