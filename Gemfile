@@ -8,6 +8,7 @@ gem 'thin'
 gem 'rake'
 gem 'activerecord'
 gem 'activesupport'
+gem 'rss'
 
 gem 'extractcontent', :git => 'https://github.com/mono0x/extractcontent.git'
 
