@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.7.6'
+ruby '3.1.2'
 
 gem 'sinatra'
 gem 'foreman'
@@ -8,6 +8,7 @@ gem 'thin'
 gem 'rake'
 gem 'activerecord'
 gem 'activesupport'
+gem 'rss'
 
 gem 'extractcontent', :git => 'https://github.com/mono0x/extractcontent.git'
 
